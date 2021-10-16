@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2021 at 11:41 AM
+-- Generation Time: Oct 16, 2021 at 11:43 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -32,9 +32,10 @@ CREATE TABLE `users` (
   `id_role` int(100) NOT NULL,
   `id_divisi` int(100) NOT NULL,
   `nik` varchar(50) NOT NULL,
-  `nama` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `no_tlp` varchar(13) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `is_active` enum('true','false','') NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
