@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2021 at 11:43 AM
+-- Generation Time: Oct 16, 2021 at 01:14 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -20,6 +20,57 @@ SET time_zone = "+00:00";
 --
 -- Database: `buah_ht`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `absensi`
+--
+
+CREATE TABLE `absensi` (
+  `id_divisi` int(100) NOT NULL,
+  `tanggal_masuk` date NOT NULL,
+  `tanggal_keluar` time NOT NULL,
+  `jam_masuk` time NOT NULL,
+  `jam_keluar` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `divisi`
+--
+
+CREATE TABLE `divisi` (
+  `id_divisi` int(100) NOT NULL,
+  `nama_divisi` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fingerprint`
+--
+
+CREATE TABLE `fingerprint` (
+  `id_fingerprint` int(100) NOT NULL,
+  `id_divisi` int(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `scan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role`
+--
+
+CREATE TABLE `role` (
+  `id_role` int(100) NOT NULL,
+  `nama_role` varchar(100) NOT NULL,
+  `deskripsi_role` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -46,6 +97,30 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `absensi`
+--
+ALTER TABLE `absensi`
+  ADD PRIMARY KEY (`id_divisi`);
+
+--
+-- Indexes for table `divisi`
+--
+ALTER TABLE `divisi`
+  ADD PRIMARY KEY (`id_divisi`);
+
+--
+-- Indexes for table `fingerprint`
+--
+ALTER TABLE `fingerprint`
+  ADD PRIMARY KEY (`id_fingerprint`);
+
+--
+-- Indexes for table `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`id_role`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -54,6 +129,30 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `absensi`
+--
+ALTER TABLE `absensi`
+  MODIFY `id_divisi` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `divisi`
+--
+ALTER TABLE `divisi`
+  MODIFY `id_divisi` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `fingerprint`
+--
+ALTER TABLE `fingerprint`
+  MODIFY `id_fingerprint` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `role`
+--
+ALTER TABLE `role`
+  MODIFY `id_role` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
