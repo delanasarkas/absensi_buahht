@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2021 at 01:14 PM
+-- Generation Time: Oct 21, 2021 at 09:48 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -28,7 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `absensi` (
-  `id_divisi` int(100) NOT NULL,
+  `id_absensi` int(100) NOT NULL,
+  `id_users` int(100) NOT NULL,
   `tanggal_masuk` date NOT NULL,
   `tanggal_keluar` time NOT NULL,
   `jam_masuk` time NOT NULL,
@@ -45,19 +46,6 @@ CREATE TABLE `absensi` (
 CREATE TABLE `divisi` (
   `id_divisi` int(100) NOT NULL,
   `nama_divisi` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `fingerprint`
---
-
-CREATE TABLE `fingerprint` (
-  `id_fingerprint` int(100) NOT NULL,
-  `id_divisi` int(100) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `scan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -100,19 +88,14 @@ CREATE TABLE `users` (
 -- Indexes for table `absensi`
 --
 ALTER TABLE `absensi`
-  ADD PRIMARY KEY (`id_divisi`);
+  ADD PRIMARY KEY (`id_absensi`),
+  ADD KEY `id_users` (`id_users`);
 
 --
 -- Indexes for table `divisi`
 --
 ALTER TABLE `divisi`
   ADD PRIMARY KEY (`id_divisi`);
-
---
--- Indexes for table `fingerprint`
---
-ALTER TABLE `fingerprint`
-  ADD PRIMARY KEY (`id_fingerprint`);
 
 --
 -- Indexes for table `role`
@@ -124,7 +107,10 @@ ALTER TABLE `role`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_users`);
+  ADD PRIMARY KEY (`id_users`),
+  ADD KEY `id_role` (`id_role`),
+  ADD KEY `id_role_2` (`id_role`),
+  ADD KEY `id_divisi` (`id_divisi`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -134,19 +120,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_divisi` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_absensi` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `divisi`
 --
 ALTER TABLE `divisi`
   MODIFY `id_divisi` int(100) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `fingerprint`
---
-ALTER TABLE `fingerprint`
-  MODIFY `id_fingerprint` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -159,6 +139,23 @@ ALTER TABLE `role`
 --
 ALTER TABLE `users`
   MODIFY `id_users` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `absensi`
+--
+ALTER TABLE `absensi`
+  ADD CONSTRAINT `absensi_ibfk_1` FOREIGN KEY (`id_users`) REFERENCES `users` (`id_users`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_divisi`) REFERENCES `divisi` (`id_divisi`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `users_ibfk_2` FOREIGN KEY (`id_role`) REFERENCES `role` (`id_role`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
