@@ -24,6 +24,10 @@
     <!-- TOASTR -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- DATATABLES -->
+    <link rel="stylesheet" type="text/css" href="/jquerydatatables/jquery.dataTables.min.css">
+
 </head>
 <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -50,6 +54,22 @@
 
     <script src="/assets/dashboard/assets/scripts/jquery.3.2.1.min.js"></script>
     <script type="text/javascript" src="/assets/dashboard/assets/scripts/main.js"></script>
+
+    <!-- DATATABLES -->
+    <script type="text/javascript" charset="utf8" src="/jquerydatatables/jquery.dataTables.min.js"></script>
+
+    <script>
+        // UNTUK TABLE KARYAWAN
+        $(document).ready( function () {
+            $('#table_karyawan').DataTable();
+        });
+
+        // UNTUK TABLE DIVISI
+        $(document).ready( function () {
+            $('#table_divisi').DataTable();
+        });
+    </script>
+
     <!-- TOASTR -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script type="text/javascript">

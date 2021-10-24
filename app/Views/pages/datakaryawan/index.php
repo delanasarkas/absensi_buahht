@@ -17,8 +17,8 @@
                 </div>    
             </div>
         </div>            
-            <div class="col-md-10  col-lg-12">
-                <a href="#" class="btn btn-primary btn-icon-split mb-2">
+            <div class="col-md-10 col-lg-12 text-right">
+                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus"></i>
                     </span>
@@ -35,7 +35,7 @@
                     <div class="card-body">
                         <div class="col-lg-12">
                            <div class="tab-pane fade show active" id="tabs-eg-77">
-                               <table id="example" class="table nowrap table-striped table-hover display" width="100%">
+                               <table id="table_karyawan" class="table nowrap table-striped table-hover display" width="100%">
                                    <thead class="bg-info text-white">
                                    <tr>
                                    <th>No</th>
@@ -45,74 +45,23 @@
                                    <th>Alamat</th>
                                    <th>Aksi</th>
                                    </tr>
-                                   <thead class="bg-white text-black">
-                                   <tr>
-                                   <th>1</th>
-                                   <th>21.09.3</th>
-                                   <th>Budi sudarsono</th>
-                                   <th>Keuangan</th>
-                                   <th>Jalan Bali Raya No 1 RT 005 RW 017</th>
-                                   <th><i class="far fa-trash-alt"></i>
-                                   <i class="fas fa-server"></i>
-                                   <i class="fas fa-edit"></i>
-                                   </th>
-                                   </tr>
-                                   <th>2</th>
-                                   <th>21.09.5</th>
-                                   <th>Hendry</th>
-                                   <th>Teknisi</th>
-                                   <th>Jalan Reni Jaya Raya No 1 RT 005 RW 017</th>
-                                   <th><i class="far fa-trash-alt"></i>
-                                   <i class="fas fa-server"></i>
-                                   <i class="fas fa-edit"></i>
-                                   </th>
-                                   </thead>
-                                   </tr>
-                                   <th>3</th>
-                                   <th>21.09.7</th>
-                                   <th>Toni Subrato</th>
-                                   <th>HRD</th>
-                                   <th>Jalan pisangan Raya No 3 RT 005 RW 017</th>
-                                   <th><i class="far fa-trash-alt"></i>
-                                   <i class="fas fa-server"></i>
-                                   <i class="fas fa-edit"></i>
-                                   </th>
-                                   </thead>
-                                   </tr>
-                                   <th>4</th>
-                                   <th>21.09.8</th>
-                                   <th>Yuda Mahendra</th>
-                                   <th>Manager</th>
-                                   <th>Jalan Manisan Jaya Raya No 1 RT 005 RW 017</th>
-                                   <th><i class="far fa-trash-alt"></i>
-                                   <i class="fas fa-server"></i>
-                                   <i class="fas fa-edit"></i>
-                                   </th>
-                                   </thead>
-                                   </tr>
-                                   <th>5</th>
-                                   <th>21.09.10</th>
-                                   <th>Hensddry</th>
-                                   <th>Helper</th>
-                                   <th>Jalan Kebenaran Jaya Raya No 1 RT 005 RW 017</th>
-                                   <th><i class="far fa-trash-alt"></i>
-                                   <i class="fas fa-server"></i>
-                                   <i class="fas fa-edit"></i>
-                                   </th>
-                                   </thead>
-                                   </tr>
+                                    </thead>
+                                   <tbody class="bg-white text-black">
+                                    <tr>
+                                    <th>1</th>
+                                    <th>21.09.3</th>
+                                    <th>Budi sudarsono</th>
+                                    <th>Keuangan</th>
+                                    <th>Jalan Bali Raya No 1 RT 005 RW 017</th>
+                                    <th><i class="far fa-trash-alt"></i>
+                                    <i class="fas fa-server mr-3 ml-3" ></i>
+                                    <i class="fas fa-edit"></i>
+                                    </th>
+                                    </tr>
+                                    </tbody>
                                </table>
                            </div>
                            </div>
-
-                           <nav aria-label="Page navigation example">
-                           <ul class="pagination">
-                           <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                           <li class="page-item"><a class="page-link" href="#">1</a></li>
-                           <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                           </ul>
-                           </nav>
-
                        </div>
                     </div>
                     </div>
