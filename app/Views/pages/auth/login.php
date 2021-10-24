@@ -5,7 +5,7 @@
     <?php $validation = \Config\Services::validation(); ?>
 
     <?php if (!empty(session()->getFlashdata('error'))) : ?>
-        <p class="error"><?php echo session()->getFlashdata('error'); ?></p>
+        <p class="error-text"><?php echo session()->getFlashdata('error'); ?></p>
     <?php endif; ?>
     <form action="/login/submit" method="post">
         <?= csrf_field(); ?>

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+// PANGGIL MODEL USERS
+use App\Models\UsersModel;
 
 class Login extends BaseController
 {
@@ -15,9 +17,14 @@ class Login extends BaseController
 
     public function submit()
 	{
+        // INISIAL MODEL USERS
+        $users = new UsersModel();
+
+        // GET FIELD NAME YANG DIKIRIM
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
+        // VALIDASI
         $validator = $this->validate([
             'email' => 'required|valid_email',
             'password' => 'required|min_length[6]',
@@ -28,8 +35,21 @@ class Login extends BaseController
                 'validation' => $this->validator
             ]);
         } else {
-            if ($email == 'admin@gmail.com' && $password == 'admin123!') {
+            // CEK DATABASE
+            $dataUser = $users->where([
+                'email' => $email,
+                'password' => md5($password)
+            ])->first();
+            // JIKA ADA DATA
+            if ($dataUser) {
                 session()->set([
+                    'id_users' => $dataUser['id_users'],
+                    'id_role' => $dataUser['id_role'],
+                    'id_divisi' => $dataUser['id_divisi'],
+                    'id_divisi' => $dataUser['id_divisi'],
+                    'nik' => $dataUser['nik'],
+                    'email' => $dataUser['email'],
+                    'username' => $dataUser['username'],
                     'logged_in' => TRUE
                 ]);
                 session()->setFlashdata('success', 'Anda berhasil login');

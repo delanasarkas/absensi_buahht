@@ -58,10 +58,10 @@
                         </div>
                         <div class="widget-content-left  ml-3 header-user-info">
                             <div class="widget-heading">
-                                Alina Mclourd
+                                <?= session()->get('username') ?>
                             </div>
                             <div class="widget-subheading">
-                                VP People Manager
+                                HRD Human Resources
                             </div>
                         </div>
                     </div>
