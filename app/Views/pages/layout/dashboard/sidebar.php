@@ -1,4 +1,5 @@
 <div class="app-sidebar sidebar-shadow">
+    <?php $request = \Config\Services::request(); ?>
     <div class="app-header__logo">
         <div class="logo-src"></div>
         <div class="header__pane ml-auto">
@@ -33,7 +34,7 @@
             <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading">Dashboards</li>
                 <li>
-                    <a href="/" class="mm-active">
+                    <a href="/" <?php if($request->uri->getSegment(1) == ''){echo 'class="mm-active"';}?>>
                         <i class="metismenu-icon pe-7s-culture"></i>
                         Dashboard
                     </a>
@@ -46,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="tables-regular.html">
+                    <a href="/karyawan" <?php if($request->uri->getSegment(1) == 'karyawan'){echo 'class="mm-active"';}?>>
                         <i class="metismenu-icon pe-7s-users"></i>
                         Data Karyawan
                     </a>

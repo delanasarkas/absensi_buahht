@@ -39,6 +39,9 @@ $routes->get('/login', 'Login::index');
 $routes->post('/login/submit', 'Login::submit');
 $routes->get('/logout', 'Login::logout');
 
+// DATA KARYAWAN
+$routes->get('/karyawan', 'DataKaryawan::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
