@@ -16,7 +16,15 @@
                     </div>
                 </div>    
             </div>
-        </div> 
+        </div>
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                <a href="/karyawan" class="btn btn-primary btn-icon-split mb-2 ">
+                        <i class="metismenu-icon pe-7s-back-2"></i>
+                    <span class="text">Kembali</span>
+                </a> 
+                </div>
+            </div>
                 <div class="mb-4 card">
                     <div class="card-header-tab card-header-tab-animation card-header">
                         <div class="card-header-title">
@@ -30,9 +38,9 @@
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
                                     <form>
                                     <?= csrf_field(); ?>
-                                    <div class="form-group">
+                                        <div class="form-group">
                                             <label for="exampleInputEmail1">Nik</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                             <small id="emailHelp" class="form-text text-muted"></small>
                                         </div>
                                         <div class="form-group">
