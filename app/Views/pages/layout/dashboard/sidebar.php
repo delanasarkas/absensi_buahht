@@ -35,16 +35,30 @@
                 <li class="app-sidebar__heading">Dashboards</li>
                 <li>
                     <a href="/" <?php if($request->uri->getSegment(1) == ''){echo 'class="mm-active"';}?>>
-                        <i class="metismenu-icon pe-7s-culture"></i>
+                          <i class="metismenu-icon pe-7s-culture"></i>
                         Dashboard
                     </a>
                 </li>
                 <li class="app-sidebar__heading">Menus</li>
                 <li>
                     <a href="tables-regular.html">
-                        <i class="metismenu-icon pe-7s-keypad"></i>
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                         Master Finger
                     </a>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                </i>Select Finger
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="#">
+                                Data Finger
+                            </a>
+                        </li>
+                    </ul>
+
                 </li>
                 <li>
                     <a href="/karyawan" <?php if($request->uri->getSegment(1) == 'karyawan'){echo 'class="mm-active"';}?>>
