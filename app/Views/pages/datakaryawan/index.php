@@ -18,7 +18,7 @@
             </div>
         </div>            
             <div class="col-md-10 col-lg-12 text-right">
-                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
+                <a href="/tambahkaryawan" class="btn btn-primary btn-icon-split mb-2 ">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus"></i>
                     </span>
@@ -36,7 +36,7 @@
                         <div class="col-lg-12">
                            <div class="tab-pane fade show active" id="tabs-eg-77">
                                <table id="table_karyawan" class="table nowrap table-striped table-hover display" width="100%">
-                                   <thead class="bg-info text-white">
+                                   <thead class="bg-primary text-white">
                                    <tr>
                                    <th>No</th>
                                    <th>Nik </th>

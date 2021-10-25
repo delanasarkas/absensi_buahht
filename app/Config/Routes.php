@@ -41,6 +41,8 @@ $routes->get('/logout', 'Login::logout');
 
 // DATA KARYAWAN
 $routes->get('/karyawan', 'DataKaryawan::index');
+//TAMBAH KARYAWAN
+$routes->get('/tambahkaryawan','Datakaryawan::tambah');
 
 /*
  * --------------------------------------------------------------------

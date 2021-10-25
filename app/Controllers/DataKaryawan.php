@@ -10,4 +10,10 @@ class DataKaryawan extends BaseController
            return view('pages/datakaryawan/index.php');
         }
     }
+
+    public function tambah()
+
+        {
+            return view('pages/datakaryawan/tambah.php');
+        }
 }

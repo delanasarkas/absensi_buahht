@@ -5,9 +5,7 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
-                    <div class="page-title-icon">
                         <img src="/assets/logo/bhp.png" alt="logo" width="74">
-                    </div>
                     <div>Dashboard
                         <div class="page-title-subheading">Sistem absensi karyawan RSIA Buah Hati Pamulang.
                         </div>
