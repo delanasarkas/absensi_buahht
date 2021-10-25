@@ -2413,12 +2413,12 @@ fieldset:disabled a.btn {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #2955c8;
-  border-color: #2651be;
+  background-color: #ff8534;
+  border-color: #ff8534;
 }
 .btn-primary:focus,
 .btn-primary.focus {
-  box-shadow: 0 0 0 0 rgba(92, 128, 222, 0.5);
+  box-shadow: 0 0 0 0 rgba(255, 181, 69, 0.5);
 }
 .btn-primary.disabled,
 .btn-primary:disabled {
@@ -2430,13 +2430,13 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #2651be;
-  border-color: #244cb3;
+  background-color: #ff6600;
+  border-color: #ff6600;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0 rgba(92, 128, 222, 0.5);
+  box-shadow: 0 0 0 0 rgba(255, 179, 17, 0.5);
 }
 .btn-secondary {
   color: #fff;
@@ -20999,3 +20999,7 @@ a.fc-more:hover {
 
 
 /* CUSTOMS CSS */
+
+.error-text{
+  color: red !important;
+}

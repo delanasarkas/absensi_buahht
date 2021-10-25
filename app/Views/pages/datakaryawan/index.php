@@ -16,14 +16,16 @@
                     </div>
                 </div>    
             </div>
-        </div>            
-            <div class="col-md-10 col-lg-12 text-right">
+        </div>    
+            <div class="col-md-10 col-lg-12 text-right">        
                 <a href="/tambahkaryawan" class="btn btn-primary btn-icon-split mb-2 ">
                     <span class="icon text-white-50">
                         <i class="metismenu-icon pe-7s-add-user"></i>
                     </span>
                     <span class="text">Tambah Karyawan</span>
                 </a> 
+            </div>
+            <div class="col-md-10 col-lg-12">
                 <div class="mb-4 card">
                     <div class="card-header-tab card-header-tab-animation card-header">
                         <div class="card-header-title">
@@ -35,31 +37,42 @@
                     <div class="card-body">
                         <div class="col-lg-12">
                            <div class="tab-pane fade show active" id="tabs-eg-77">
+                           <div class="table-responsive">
                                <table id="table_karyawan" class="table nowrap table-striped table-hover display" width="100%">
                                    <thead class="bg-primary text-white">
                                    <tr>
-                                   <th>No</th>
-                                   <th>Nik </th>
-                                   <th>Nama Karyawan</th>
-                                   <th>Divisi</th>
-                                   <th>Alamat</th>
-                                   <th>Aksi</th>
+                                    <th class="text-center">No</th>
+                                    <th>Nik </th>
+                                    <th>Nama Karyawan</th>
+                                    <th>Divisi</th>
+                                    <th>Aktif</th>
+                                    <th>Aksi</th>
                                    </tr>
                                     </thead>
                                    <tbody class="bg-white text-black">
-                                    <tr>
-                                    <th>1</th>
-                                    <th>21.09.3</th>
-                                    <th>Budi sudarsono</th>
-                                    <th>Keuangan</th>
-                                    <th>Jalan Bali Raya No 1 RT 005 RW 017</th>
-                                    <th><i class="far fa-trash-alt"></i>
-                                    <i class="fas fa-server mr-3 ml-3" ></i>
-                                    <i class="fas fa-edit"></i>
-                                    </th>
-                                    </tr>
+                                    <?php $i = 1; ?>
+                                    <?php foreach($user as $data) : ?>
+                                        <tr>
+                                            <th class="text-center"><?= $i++ ?></th>
+                                            <th><?= $data['nik'] ?></th>
+                                            <th><?= $data['username'] ?></th>
+                                            <th><?= $data['nama_divisi'] ?></th>
+                                            <th>
+                                                <?php if($data['is_active'] == true) { ?>
+                                                    <div class="badge badge-success">AKTIF</div>
+                                                <?php } else { ?>
+                                                        <div class="badge badge-danger">INAKTIF</div>
+                                                <?php } ?>
+                                            </th>
+                                            <th><i class="far fa-trash-alt"></i>
+                                            <i class="fas fa-server mr-3 ml-3" ></i>
+                                            <i class="fas fa-edit"></i>
+                                            </th>
+                                        </tr>
+                                    <?php endforeach; ?>
                                     </tbody>
                                </table>
+                           </div>
                            </div>
                            </div>
                        </div>

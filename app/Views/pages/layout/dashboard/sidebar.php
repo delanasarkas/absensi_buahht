@@ -42,18 +42,21 @@
                 <li class="app-sidebar__heading">Menus</li>
                 <li>
                     <a href="tables-regular.html">
-                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                        <i class="metismenu-icon pe-7s-keypad"></i>
                         Master Finger
+                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
 
                     <ul>
                         <li>
                             <a href="#">
-                                </i>Select Finger
+                                <i class="metismenu-icon"></i>
+                                Select Finger
                             </a>
                         </li> 
                         <li>
                             <a href="#">
+                                <i class="metismenu-icon"></i>
                                 Data Finger
                             </a>
                         </li>

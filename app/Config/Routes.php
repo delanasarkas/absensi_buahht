@@ -43,6 +43,7 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/karyawan', 'DataKaryawan::index');
 //TAMBAH KARYAWAN
 $routes->get('/tambahkaryawan','Datakaryawan::tambah');
+$routes->add('/karyawan/add', 'Datakaryawan::prosesTambah');
 // EDIT KARYAWAN
 $routes->get('/editkaryawan','Datakaryawan::edit');
 

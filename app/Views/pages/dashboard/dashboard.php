@@ -5,8 +5,9 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
-                        <img src="/assets/logo/bhp.png" alt="logo" width="74">
-                    <div>Dashboard
+                    <img src="/assets/logo/bhp.png" alt="logo" width="74">
+                    <div class="ml-2">
+                        Dashboard
                         <div class="page-title-subheading">Sistem absensi karyawan RSIA Buah Hati Pamulang.
                         </div>
                     </div>
