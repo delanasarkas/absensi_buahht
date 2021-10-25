@@ -43,6 +43,11 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/karyawan', 'DataKaryawan::index');
 //TAMBAH KARYAWAN
 $routes->get('/tambahkaryawan','Datakaryawan::tambah');
+// EDIT KARYAWAN
+$routes->get('/editkaryawan','Datakaryawan::edit');
+
+// MASTER FINGER
+$routes->get('/select','Masterfinger::index');
 
 /*
  * --------------------------------------------------------------------

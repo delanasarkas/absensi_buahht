@@ -12,8 +12,16 @@ class DataKaryawan extends BaseController
     }
 
     public function tambah()
-
+    {
         {
             return view('pages/datakaryawan/tambah.php');
         }
+    }
+    
+    public function edit()
+    {
+        {
+            return view('pages/datakaryawan/edit.php');
+        }
+    }
 }
