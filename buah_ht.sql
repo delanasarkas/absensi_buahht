@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2021 at 09:48 AM
+-- Generation Time: Oct 26, 2021 at 03:54 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -48,6 +48,14 @@ CREATE TABLE `divisi` (
   `nama_divisi` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `divisi`
+--
+
+INSERT INTO `divisi` (`id_divisi`, `nama_divisi`) VALUES
+(1, 'HRD'),
+(2, 'IT');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +68,14 @@ CREATE TABLE `role` (
   `deskripsi_role` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `role`
+--
+
+INSERT INTO `role` (`id_role`, `nama_role`, `deskripsi_role`) VALUES
+(1, 'admin', 'mengatur seluruh sistem'),
+(2, 'user', 'karyawan biasa');
+
 -- --------------------------------------------------------
 
 --
@@ -71,14 +87,24 @@ CREATE TABLE `users` (
   `id_role` int(100) NOT NULL,
   `id_divisi` int(100) NOT NULL,
   `nik` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `no_tlp` varchar(13) NOT NULL,
   `password` varchar(255) NOT NULL,
   `is_active` enum('true','false','') NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL
+  `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id_users`, `id_role`, `id_divisi`, `nik`, `email`, `username`, `alamat`, `no_tlp`, `password`, `is_active`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '81828120109', 'rinda@gmail.com', 'Rinda', 'JL.PASAR SASAK CILEDUK JAYA', '0812812828', '2807266b476de7e2969e5f6669a225ac', 'true', '2021-10-24 16:46:10', '0000-00-00 00:00:00'),
+(2, 2, 2, '20161477', 'Solehun@gmail.com', 'Solehun', 'JL.PAJAJARAN BARAT RAYA INDAH', '08921727127', 'c890411b93dcaadfdb30ffe2752d96d5', 'true', '2021-10-25 10:32:36', NULL),
+(3, 2, 2, '2016148799', 'neiji@gmail.com', 'Neiji', 'JL.PANGUYUBUAN RAYA BARAT 2', '089182718188', '3d3eb22ed9e275a262a6eadded25eebc', 'true', '2021-10-26 07:59:42', NULL);
 
 --
 -- Indexes for dumped tables
@@ -126,19 +152,19 @@ ALTER TABLE `absensi`
 -- AUTO_INCREMENT for table `divisi`
 --
 ALTER TABLE `divisi`
-  MODIFY `id_divisi` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_divisi` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
-  MODIFY `id_role` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_role` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_users` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_users` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
