@@ -64,7 +64,7 @@
 
                 </li>
                 <li>
-                    <a href="/karyawan" <?php if($request->uri->getSegment(1) == 'karyawan'){echo 'class="mm-active"';}?>>
+                    <a href="/karyawan" <?php if($request->uri->getSegment(1) == 'karyawan' || $request->uri->getSegment(1) == 'tambahkaryawan'){echo 'class="mm-active"';}?>>
                         <i class="metismenu-icon pe-7s-users"></i>
                         Data Karyawan
                     </a>

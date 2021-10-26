@@ -21003,3 +21003,7 @@ a.fc-more:hover {
 .error-text{
   color: red !important;
 }
+
+.cursor {
+  cursor: pointer;
+}

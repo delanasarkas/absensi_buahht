@@ -37,19 +37,19 @@
         <!-- END HEADER -->
                     
         <div class="app-main">
-                <!-- SIDEBAR -->
-                    <?= $this->include('pages/layout/dashboard/sidebar') ?>
-                <!-- END SIDEBAR -->
-                <div class="app-main__outer">
-                    <!-- CONTENT UTAMA -->
-                        <?= $this->renderSection('content') ?>
-                    <!-- END CONTENT UTAMA -->
+            <!-- SIDEBAR -->
+            <?= $this->include('pages/layout/dashboard/sidebar') ?>
+            <!-- END SIDEBAR -->
+            <div class="app-main__outer">
+            <!-- CONTENT UTAMA -->
+            <?= $this->renderSection('content') ?>
+            <!-- END CONTENT UTAMA -->
 
-                    <!-- FOOTER -->
-                        <?= $this->renderSection('footer') ?>
-                    <!-- END FOOTER -->
-                </div>
-                <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+            <!-- FOOTER -->
+            <?= $this->include('pages/layout/dashboard/footer') ?>
+            <!-- END FOOTER -->
+            </div>
+            <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>
     </div>
 
