@@ -94,4 +94,14 @@ class DataKaryawan extends BaseController
     {
         return view('pages/datakaryawan/edit');
     }
+
+    public function detail()
+    {
+        return view('pages/datakaryawan/detail');
+    }
+
+    public function delete()
+    {
+        return view('pages/datakaryawan/delete');
+    }
 }

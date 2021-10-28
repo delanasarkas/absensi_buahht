@@ -43,9 +43,14 @@ $routes->get('/logout', 'Login::logout');
 $routes->get('/karyawan', 'DataKaryawan::index');
 //TAMBAH KARYAWAN
 $routes->get('/tambahkaryawan','Datakaryawan::tambah');
-$routes->add('/karyawan/add', 'Datakaryawan::prosesTambah');
+$routes->add('/karyawan/add','Datakaryawan::prosesTambah');
 // EDIT KARYAWAN
 $routes->get('/editkaryawan','Datakaryawan::edit');
+// DETAIL KARYAWAN
+$routes->get('/detailkaryawan','Datakaryawan::detail');
+// DELETE KARYAWAN
+$routes->get('/deletekaryawan','Datakaryawan::delete');
+
 
 // MASTER FINGER
 $routes->get('/select','Masterfinger::index');

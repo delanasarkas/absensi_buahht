@@ -69,9 +69,15 @@
                                                             <?php } ?>
                                                         </th>
                                                         <th>
-                                                        <i class="fas fa-trash text-danger cursor"></i>
-                                                        <i class="fas fa-list text-success mr-3 ml-3 cursor" ></i>
-                                                        <i class="fas fa-edit text-info cursor"></i>
+                                                            <a href="/deletekaryawan" class="btn btn-white btn-icon-split mb-2 "> 
+                                                                    <i class="fas fa-trash text-danger cursor"></i>
+                                                            </a>
+                                                            <a href="/detailkaryawan" class="btn btn-white btn-icon-split mb-2 ">         
+                                                                    <i class="fas fa-list text-success mr-1 ml-1 cursor" ></i>
+                                                            </a>
+                                                            <a href="/editkaryawan" class="btn btn-white btn-icon-split mb-2 ">
+                                                                    <i class="fas fa-edit text-info cursor"></i>
+                                                            </a>
                                                         </th>
                                                     </tr>
                                                 <?php endforeach; ?>

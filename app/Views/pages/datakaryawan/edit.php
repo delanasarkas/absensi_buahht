@@ -17,14 +17,6 @@
                 </div>    
             </div>
         </div>
-            <div class="row">
-                <div class="col-lg-12 text-right">
-                <a href="/karyawan" class="btn btn-primary btn-icon-split mb-2 ">
-                        <i class="metismenu-icon pe-7s-back-2"></i>
-                    <span class="text">Kembali</span>
-                </a> 
-                </div>
-            </div>
                 <div class="mb-4 card">
                     <div class="card-header-tab card-header-tab-animation card-header">
                         <div class="card-header-title">
@@ -52,15 +44,20 @@
                                             <label for="exampleInputEmail1">Divisi</label>
                                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                             <small id="emailHelp" class="form-text text-muted"></small>
-                                        </div><div class="form-group">
+                                        </div>
+                                        <div class="form-group">
                                             <label for="exampleInputEmail1">Alamat</label>
                                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                             <small id="emailHelp" class="form-text text-muted"></small>
                                         </div>
                                             <button type="submit" class="btn btn-primary">
-                                                <i class="fas fa-plus"></i>
+                                                <i class="metismenu-icon pe-7s-note"></i>
                                                     Edit
                                             </button>
+                                            <a href="/karyawan" class="btn btn-danger btn-icon-split">
+                                                <i class="metismenu-icon pe-7s-back-2"></i>
+                                            <span class="text">Kembali</span>
+                                        </a>
                                     </form>
                                 </div>
                             </div>
