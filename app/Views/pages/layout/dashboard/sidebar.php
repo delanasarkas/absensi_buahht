@@ -55,7 +55,7 @@
                             </a>
                         </li> 
                         <li>
-                            <a href="#">
+                            <a href="/datafinger">
                                 <i class="metismenu-icon"></i>
                                 Data Finger
                             </a>
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="tables-regular.html">
+                    <a href="#">
                         <i class="metismenu-icon pe-7s-id"></i>
                         Data Divisi
                     </a>

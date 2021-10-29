@@ -56,7 +56,15 @@ $routes->get('/deletekaryawan','Datakaryawan::delete');
 $routes->get('/selectfinger','Masterfinger::index');
 // TAMBAH FINGER
 $routes->get('/tambahfinger','Masterfinger::tambah');
+// EDIT FINGER
+$routes->get('/editfinger','Masterfinger::edit');
+// DETAIL FINGER
+$routes->get('/detailfinger','Masterfinger::detail');
 
+// DATA FINGER
+$routes->get('/datafinger','Masterfinger::index2');
+// DETAIL FINGER
+$routes->get('/detaildatafinger','Masterfinger::detail2');
 
 /*
  * --------------------------------------------------------------------

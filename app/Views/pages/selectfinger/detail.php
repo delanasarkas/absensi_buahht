@@ -5,9 +5,9 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
-                    <img src="/assets/logo/select2.jpg" width="180" alt="">
+                    <img src="/assets/logo/detail.jpg" width="180" alt="">
                     <div class="ml-2">
-                        <h2>TAMBAH DATA IP </h2>
+                        <h2>DETAIL IP ADDRESS</h2>
                         <div class="page-title-subheading">RSIA BUAH HATI PAMULANG</div>
                     </div>
                 </div>
@@ -17,6 +17,16 @@
                 </div>    
             </div>
         </div>            
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
+                    <span class="icon text-white-50">
+                        <i class="metismenu-icon pe-7s-print"></i>
+                    </span>
+                    <span class="text">CETAK</span>
+                </a> 
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
@@ -35,19 +45,15 @@
                                     <form>
                                     <?= csrf_field(); ?>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">IP ADDRESS</label>
-                                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                            <h5 class="text-primary"><strong>IP ADDRESS</strong></h5>
                                         </div>
-                                            <button type="submit" class="btn btn-primary">
-                                                <i class="metismenu-icon pe-7s-plus"></i>
-                                                    Tambah
-                                            </button>
-                                            <a href="/selectfinger" class="btn btn-danger btn-icon-split">
+                                        <div class="form-group">
+                                            <h7 class="text-dark"><strong>192.168.88.3</strong></h7>
+                                        </div>
+                                        <a href="/selectfinger" class="btn btn-danger btn-icon-split">
                                                 <i class="metismenu-icon pe-7s-back-2"></i>
                                             <span class="text">Kembali</span>
                                         </a>
-                                    </form>
                                     </div>
                                 </div>
                             </div>      

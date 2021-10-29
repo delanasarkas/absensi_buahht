@@ -5,9 +5,9 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
-                    <img src="/assets/logo/select2.jpg" width="180" alt="">
+                    <img src="/assets/dashboard/assets/images/tambah.jpg" width="180" alt="">
                     <div class="ml-2">
-                        <h2>TAMBAH DATA IP </h2>
+                        <h2>EDIT DATA KARYAWAN</h2>
                         <div class="page-title-subheading">RSIA BUAH HATI PAMULANG</div>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                     </div>
                 </div>    
             </div>
-        </div>            
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
@@ -33,20 +33,20 @@
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
                                     <div class="table-responsive">
                                     <form>
-                                    <?= csrf_field(); ?>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">IP ADDRESS</label>
-                                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                            <small id="emailHelp" class="form-text text-muted"></small>
-                                        </div>
-                                            <button type="submit" class="btn btn-primary">
-                                                <i class="metismenu-icon pe-7s-plus"></i>
-                                                    Tambah
-                                            </button>
-                                            <a href="/selectfinger" class="btn btn-danger btn-icon-split">
-                                                <i class="metismenu-icon pe-7s-back-2"></i>
+                                <?= csrf_field(); ?>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">IP ADDRESS</label>
+                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                    <small id="emailHelp" class="form-text text-muted"></small>
+                                </div>
+                                    <button type="submit" class="btn btn-primary">
+                                         <i class="metismenu-icon pe-7s-note"></i>
+                                             Edit
+                                    </button>
+                                    <a href="/karyawan" class="btn btn-danger btn-icon-split">
+                                        <i class="metismenu-icon pe-7s-back-2"></i>
                                             <span class="text">Kembali</span>
-                                        </a>
+                                    </a>
                                     </form>
                                     </div>
                                 </div>
