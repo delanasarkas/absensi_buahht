@@ -53,7 +53,10 @@ $routes->get('/deletekaryawan','Datakaryawan::delete');
 
 
 // MASTER FINGER
-$routes->get('/select','Masterfinger::index');
+$routes->get('/selectfinger','Masterfinger::index');
+// TAMBAH FINGER
+$routes->get('/tambahfinger','Masterfinger::tambah');
+
 
 /*
  * --------------------------------------------------------------------

@@ -16,8 +16,20 @@
                     </div>
                 </div>    
             </div>
+        </div>            
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
+                    <span class="icon text-white-50">
+                        <i class="metismenu-icon pe-7s-print"></i>
+                    </span>
+                    <span class="text">CETAK</span>
+                </a> 
             </div>
-                <div class="mb-4 card">
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-3 card">
                     <div class="card-header-tab card-header-tab-animation card-header">
                         <div class="card-header-title">
                             <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
@@ -25,93 +37,101 @@
                             RSIA BUAH HATI PAMULANG
                         </div>
                     </div>
-                        <div class="card-body">
+                    <div class="card-body">
+                        <div class="row">
                             <div class="col-lg-12">
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
+                                    <div class="table-responsive">
                                     <form>
                                     <?= csrf_field(); ?>
                                         <div class="form-group">
                                             <h5 class="text-primary"><strong>NIK</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-Dark"><strong>00000000</strong></h3>
+                                            <h7 class="text-dark"><strong>365723183128312</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Divisi</strong></h5>
+                                            <h5 class="text-primary"><strong>NAMA KAYAWAN</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-Dark"><strong>Hrd</strong></h3>
+                                            <h7 class="text-dark"><strong>YUSUF ALIZAR</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Alamat Saat Ini</strong></h5>
-                                        </div>
-                                            <h3 class="text-Dark"><strong>Jalan Kenari 4 blok ae 1 </strong></h3>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>Status Tempat Tinggal</strong></h5>
+                                            <h5 class="text-primary"><strong>DIVISI</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-Dark"><strong>Orang Tua </strong></h3>
+                                            <h7 class="text-dark"><strong>IT</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Golongan Darah</strong></h5>
+                                            <h5 class="text-primary"><strong>ALAMAT KTP</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-Dark"><strong>O</strong></h3>
+                                            <h7 class="text-dark"><strong>JALAN SANGAT SEGAR RT 005 RW 017</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Telephon</strong></h5>
-                                        </div>
-                                        <di v class="form-group">
-                                            <h3 class="text-Dark"><strong>0210321021</strong></h3>
+                                            <h5 class="text-primary"><strong>ALAMAT SAAT INI</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>No HP</strong></h5>
+                                            <h7 class="text-dark"><strong>JALAN SANGAT MANIS RT 007 RW 005</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-dark"><strong>08282828282</strong></h3>
+                                            <h5 class="text-primary"><strong>STATUS TEMPAT TINGGAL</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Agama</strong></h5>
+                                            <h7 class="text-dark"><strong>ORANG TUA</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-dark"><strong>Islam</strong></h3>
+                                            <h5 class="text-primary"><strong>GOLONGAN DARAH</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Kewarganegaraan</strong></h5>
+                                            <h7 class="text-dark"><strong>O</strong></h7>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-dark"><strong>Wni</strong></h3>
+                                            <h5 class="text-primary"><strong>TELEPHON</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h5 class="text-primary"><strong>Npwp</strong></h5>
+                                            <h7 class="text-dark"><strong>02134568888</strong></h7>
+                                        <div class="form-group">
+                                            <h5 class="text-primary"><strong>NO HP</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-dark"><strong>101012003030230</strong></h3>
+                                            <h7 class="text-dark"><strong>08956364723482</strong></h7>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5 class="text-primary"><strong>AGAMA</strong></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <h7 class="text-dark"><strong>ISLAM</strong></h7>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5 class="text-primary"><strong>KEWARGANEGARAAN</strong></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <h7 class="text-dark"><strong>WNI</strong></h7>
                                         </div>
                                         <div class="form-group">
                                             <h5 class="text-primary"><strong>KTP</strong></h5>
                                         </div>
                                         <div class="form-group">
-                                            <h3 class="text-dark"><strong>31512003030230</strong></h3>
+                                            <h7 class="text-dark"><strong>367482832219</strong></h7>
                                         </div>
-                                            <a href="/karyawan" class="btn btn-danger btn-icon-split">
+                                        <div class="form-group">
+                                            <h5 class="text-dark"><strong>NPWP</strong></h5>
+                                        </div>
+                                        <div class="form-group">
+                                            <h7 class="text-primary"><strong>3436282399232</strong></h7>
+                                        </div>
+                                        <a href="/karyawan" class="btn btn-danger btn-icon-split">
                                                 <i class="metismenu-icon pe-7s-back-2"></i>
                                             <span class="text">Kembali</span>
                                         </a>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
+                            </div>      
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="card text-center">
- <div class="card-body">
-    Copyright  <i class="far fa-copyright"></i> RSIA Buah Hati Pamulang
-  </div>
-</div>
     </div>
 <?= $this->endSection() ?>

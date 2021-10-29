@@ -5,9 +5,9 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
-                    <img src="/assets/logo/select.jpg" width="180" alt="">
+                    <img src="/assets/logo/select2.jpg" width="180" alt="">
                     <div class="ml-2">
-                        <h2>SELECT FINGER </h2>
+                        <h2>TAMBAH DATA IP </h2>
                         <div class="page-title-subheading">RSIA BUAH HATI PAMULANG</div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
         </div>            
         <div class="row">
             <div class="col-md-12 text-right">
-                <a href="/tambahfinger" class="btn btn-primary btn-icon-split mb-2 ">
+                <a href="/tamba" class="btn btn-primary btn-icon-split mb-2 ">
                     <span class="icon text-white-50">
                         <i class="metismenu-icon pe-7s-add-user"></i>
                     </span>
@@ -42,25 +42,22 @@
                             <div class="col-lg-12">
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
                                     <div class="table-responsive">
-                                    <table id="table_karyawan" class="table nowrap table-striped table-hover display" width="100%">
-                                        <thead class="bg-primary text-white">
-                                            <tr>
-                                            <th>No</th>
-                                            <th>IP Address</th>
-                                            <th>Aksi</th>
-                                            </tr>
-                                        </thead>
-                                            <tbody class="bg-white text-black">
-                                                <tr>
-                                                <th>1</th>
-                                                <th>192.168.88.3</th>
-                                                <th><i class="far fa-trash-alt"></i>
-                                                <i class="fas fa-server mr-3 ml-3" ></i>
-                                                <i class="fas fa-edit"></i>
-                                                </th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <form>
+                                    <?= csrf_field(); ?>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">IP ADDRESS</label>
+                                            <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="metismenu-icon pe-7s-note"></i>
+                                                    Edit
+                                            </button>
+                                            <a href="/karyawan" class="btn btn-danger btn-icon-split">
+                                                <i class="metismenu-icon pe-7s-back-2"></i>
+                                            <span class="text">Kembali</span>
+                                        </a>
+                                    </form>
                                     </div>
                                 </div>
                             </div>      

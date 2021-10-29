@@ -49,7 +49,7 @@
 
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="/selectfinger">
                                 <i class="metismenu-icon"></i>
                                 Select Finger
                             </a>
