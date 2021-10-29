@@ -1,6 +1,9 @@
 <?= $this->extend('pages\layout\dashboard\template') ?>
 
 <?= $this->section('content') ?>
+    <!-- VALIDATION PLUGIN -->
+    <?php $validation = \Config\Services::validation(); ?>
+    
     <div class="app-main__inner">
         <div class="app-page-title">
             <div class="page-title-wrapper">
@@ -14,9 +17,9 @@
                 <div class="page-title-actions">
                     <div class="d-inline-block dropdown">
                     </div>
-                </div>    
+                </div> 
             </div>
-        </div>
+        </div>            
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
@@ -31,89 +34,132 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
-                                    <div class="table-responsive">
-                                    <form>
-                                <?= csrf_field(); ?>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nik</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nama Karyawan</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Divisi</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Alamat Ktp</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Alamat Saat ini</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Alamat Saat Ktp</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Status Tempat Tinggal</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Golongan Darah</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Telephon</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">No HP</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Agama</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Kewarganegaraan</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">KTP</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">NPWP</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
-                                    <button type="submit" class="btn btn-primary">
-                                         <i class="metismenu-icon pe-7s-note"></i>
-                                             Edit
-                                    </button>
-                                    <a href="/karyawan" class="btn btn-danger btn-icon-split">
-                                        <i class="metismenu-icon pe-7s-back-2"></i>
+                                    <form action="/proseseditkaryawan/<?= $user[0]['id_users'] ?>" method="post">
+                                    <?= csrf_field(); ?>
+                                        <div class="form-group">
+                                            <label for="nik">Nik</label>
+                                            <input type="number" class="form-control" value="<?= $user[0]['nik'] ?>" id="nik" name="nik" placeholder="Enter NIK">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('nik')) {?>
+                                                <small class="error-text">
+                                                    <?= $error = $validation->getError('nik'); ?>
+                                                </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name">Nama Karyawan</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['username'] ?>" id="name" name="name" placeholder="Enter Name">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('name')) {?>
+                                                <small class="error-text">
+                                                    <?= $error = $validation->getError('name'); ?>
+                                                </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">No HP</label>
+                                            <input type="number" class="form-control" value="<?= $user[0]['no_tlp'] ?>" id="phone" name="phone" placeholder="Enter Phone Number">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('phone')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('phone'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="agama">Agama</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['agama'] ?>" id="agama" name="agama" placeholder="Agama">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('agama')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('agama'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status_tinggal">Status Tinggal</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['status_tinggal'] ?>" id="status_tinggal" name="status_tinggal" placeholder="Status Tinggal">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('status_tinggal')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('status_tinggal'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gol_darah">Golongan Darah</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['gol_darah'] ?>" id="gol_darah" name="gol_darah" placeholder="Golongan Darah">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('gol_darah')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('gol_darah'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="warga">Warga Negara</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['warga'] ?>" id="warga" name="warga" placeholder="Warga Negara">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('warga')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('warga'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ktp">No KTP</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['ktp'] ?>" id="ktp" name="ktp" placeholder="Nomor Ktp">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('ktp')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('ktp'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="npwp">No Npwp</label>
+                                            <input type="text" class="form-control" value="<?= $user[0]['npwp'] ?>" id="npwp" name="npwp" placeholder="Nomor Npwp">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('npwp')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('npwp'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="divition">Divisi</label>
+                                            <select class="form-control" id="divition" name="divition">
+                                                <option value="">PILIH</option>
+                                                <?php foreach($divisi as $data) : ?>
+                                                    <option value="<?= $data['id_divisi'] ?>" <?= $user[0]['id_divisi'] == $data['id_divisi'] ? 'selected' : '' ?>><?= $data['nama_divisi'] ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <!-- Error -->
+                                            <?php if($validation->getError('divition')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('divition'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Alamat</label>
+                                            <textarea class="form-control" id="address" name="address" rows="3"><?= $user[0]['alamat'] ?></textarea>
+                                            <!-- Error -->
+                                            <?php if($validation->getError('address')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('address'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mr-2">
+                                            <i class="fas fa-edit"></i>
+                                                Edit
+                                        </button>
+                                        <a href="/karyawan" class="btn btn-danger btn-icon-split">
+                                                <i class="metismenu-icon pe-7s-back-2"></i>
                                             <span class="text">Kembali</span>
-                                    </a>
+                                        </a>
                                     </form>
-                                    </div>
                                 </div>
                             </div>      
                         </div>

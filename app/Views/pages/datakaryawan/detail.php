@@ -1,6 +1,9 @@
 <?= $this->extend('pages\layout\dashboard\template') ?>
 
 <?= $this->section('content') ?>
+    <!-- VALIDATION PLUGIN -->
+    <?php $validation = \Config\Services::validation(); ?>
+    
     <div class="app-main__inner">
         <div class="app-page-title">
             <div class="page-title-wrapper">
@@ -14,19 +17,9 @@
                 <div class="page-title-actions">
                     <div class="d-inline-block dropdown">
                     </div>
-                </div>    
+                </div> 
             </div>
         </div>            
-        <div class="row">
-            <div class="col-md-12 text-right">
-                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
-                    <span class="icon text-white-50">
-                        <i class="metismenu-icon pe-7s-print"></i>
-                    </span>
-                    <span class="text">CETAK</span>
-                </a> 
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
@@ -41,91 +34,32 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
-                                    <div class="table-responsive">
-                                    <form>
-                                    <?= csrf_field(); ?>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>NIK</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>365723183128312</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>NAMA KAYAWAN</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>YUSUF ALIZAR</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>DIVISI</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>IT</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>ALAMAT KTP</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>JALAN SANGAT SEGAR RT 005 RW 017</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>ALAMAT SAAT INI</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>JALAN SANGAT MANIS RT 007 RW 005</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>STATUS TEMPAT TINGGAL</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>ORANG TUA</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>GOLONGAN DARAH</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>O</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>TELEPHON</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>02134568888</strong></h7>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>NO HP</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>08956364723482</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>AGAMA</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>ISLAM</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>KEWARGANEGARAAN</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>WNI</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-primary"><strong>KTP</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-dark"><strong>367482832219</strong></h7>
-                                        </div>
-                                        <div class="form-group">
-                                            <h5 class="text-dark"><strong>NPWP</strong></h5>
-                                        </div>
-                                        <div class="form-group">
-                                            <h7 class="text-primary"><strong>3436282399232</strong></h7>
-                                        </div>
-                                        <a href="/karyawan" class="btn btn-danger btn-icon-split">
-                                                <i class="metismenu-icon pe-7s-back-2"></i>
-                                            <span class="text">Kembali</span>
-                                        </a>
-                                    </div>
+                                    <h5 class="text-primary"><strong>NIK</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['nik'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>NAMA KAYAWAN</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['username'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>DIVISI</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['nama_divisi'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>ALAMAT</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['alamat'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>STATUS TEMPAT TINGGAL</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['status_tinggal'] == null ? '-' : $user[0]['status_tinggal'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>GOLONGAN DARAH</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['gol_darah'] == null ? '-' : $user[0]['gol_darah'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>TELEPHONE</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['no_tlp'] == null ? '-' : $user[0]['no_tlp'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>AGAMA</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['agama'] == null ? '-' : $user[0]['agama'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>KEWARGANEGARAAN</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['warga'] == null ? '-' : $user[0]['warga'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>KTP</strong></h5>
+                                    <h7 class="text-dark"><strong><?= $user[0]['ktp'] == null ? '-' : $user[0]['ktp'] ?></strong></h7>
+                                    <h5 class="text-primary mt-3"><strong>NPWP</strong></h5>
+                                    <h7 class="text-dark d-block"><strong><?= $user[0]['npwp'] == null ? '-' : $user[0]['npwp'] ?></strong></h7>
+                                    <a href="/karyawan" class="btn btn-danger btn-icon-split mt-4">
+                                            <i class="metismenu-icon pe-7s-back-2"></i>
+                                        <span class="text">Kembali</span>
+                                    </a>
                                 </div>
                             </div>      
                         </div>

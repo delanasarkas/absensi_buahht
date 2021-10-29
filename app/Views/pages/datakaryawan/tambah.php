@@ -67,6 +67,66 @@
                                             <?php }?>
                                         </div>
                                         <div class="form-group">
+                                            <label for="agama">Agama</label>
+                                            <input type="text" class="form-control" id="agama" name="agama" placeholder="Agama">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('agama')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('agama'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status_tinggal">Status Tinggal</label>
+                                            <input type="text" class="form-control" id="status_tinggal" name="status_tinggal" placeholder="Status Tinggal">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('status_tinggal')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('status_tinggal'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gol_darah">Golongan Darah</label>
+                                            <input type="text" class="form-control" id="gol_darah" name="gol_darah" placeholder="Golongan Darah">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('gol_darah')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('gol_darah'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="warga">Warga Negara</label>
+                                            <input type="text" class="form-control" id="warga" name="warga" placeholder="Warga Negara">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('warga')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('warga'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ktp">No KTP</label>
+                                            <input type="text" class="form-control" id="ktp" name="ktp" placeholder="Nomor Ktp">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('ktp')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('ktp'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="npwp">No Npwp</label>
+                                            <input type="text" class="form-control" id="npwp" name="npwp" placeholder="Nomor Npwp">
+                                            <!-- Error -->
+                                            <?php if($validation->getError('npwp')) {?>
+                                                    <small class="error-text">
+                                                        <?= $error = $validation->getError('npwp'); ?>
+                                                    </small>
+                                            <?php }?>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="divition">Divisi</label>
                                             <select class="form-control" id="divition" name="divition">
                                                 <option value="">PILIH</option>

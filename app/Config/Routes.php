@@ -45,11 +45,13 @@ $routes->get('/karyawan', 'DataKaryawan::index');
 $routes->get('/tambahkaryawan','Datakaryawan::tambah');
 $routes->add('/karyawan/add','Datakaryawan::prosesTambah');
 // EDIT KARYAWAN
-$routes->get('/editkaryawan','Datakaryawan::edit');
+$routes->get('/editkaryawan/(:segment)','Datakaryawan::edit/$1');
+// PROSES EDIT KARYAWAN
+$routes->add('/proseseditkaryawan/(:segment)','Datakaryawan::prosesEdit/$1');
 // DETAIL KARYAWAN
-$routes->get('/detailkaryawan','Datakaryawan::detail');
+$routes->get('/detailkaryawan/(:segment)','Datakaryawan::detail/$1');
 // DELETE KARYAWAN
-$routes->get('/deletekaryawan','Datakaryawan::delete');
+$routes->get('/deletekaryawan/(:segment)', 'Datakaryawan::delete/$1');
 
 
 // MASTER FINGER

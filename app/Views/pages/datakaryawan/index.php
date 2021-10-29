@@ -57,28 +57,28 @@
                                                 <?php $i = 1; ?>
                                                 <?php foreach($user as $data) : ?>
                                                     <tr>
-                                                        <th class="text-center"><?= $i++ ?></th>
-                                                        <th><?= $data['nik'] ?></th>
-                                                        <th><?= $data['username'] ?></th>
-                                                        <th><?= $data['nama_divisi'] ?></th>
-                                                        <th>
+                                                        <td class="text-center"><?= $i++ ?></td>
+                                                        <td><?= $data['nik'] ?></td>
+                                                        <td><?= $data['username'] ?></td>
+                                                        <td><?= $data['nama_divisi'] ?></td>
+                                                        <td>
                                                             <?php if($data['is_active'] == true) { ?>
                                                                 <div class="badge badge-success">AKTIF</div>
                                                             <?php } else { ?>
                                                                     <div class="badge badge-danger">INAKTIF</div>
                                                             <?php } ?>
-                                                        </th>
-                                                        <th>
-                                                            <a href="/deletekaryawan" class="btn btn-white btn-icon-split mb-2 "> 
+                                                        </td>
+                                                        <td>
+                                                            <a href="/deletekaryawan/<?= $data['id_users']; ?>" onclick="return confirm('Yakin hapus data?')" class="btn btn-white btn-icon-split mb-2 "> 
                                                                     <i class="fas fa-trash text-danger cursor"></i>
                                                             </a>
-                                                            <a href="/detailkaryawan" class="btn btn-white btn-icon-split mb-2 ">         
+                                                            <a href="/detailkaryawan/<?= $data['id_users'] ?>" class="btn btn-white btn-icon-split mb-2 ">         
                                                                     <i class="fas fa-list text-success mr-1 ml-1 cursor" ></i>
                                                             </a>
-                                                            <a href="/editkaryawan" class="btn btn-white btn-icon-split mb-2 ">
+                                                            <a href="/editkaryawan/<?= $data['id_users'] ?>" class="btn btn-white btn-icon-split mb-2 ">
                                                                     <i class="fas fa-edit text-info cursor"></i>
                                                             </a>
-                                                        </th>
+                                                        </td>
                                                     </tr>
                                                 <?php endforeach; ?>
                                                 </tbody>
