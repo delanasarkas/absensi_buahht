@@ -54,9 +54,11 @@
                                                 <tr>
                                                 <th>1</th>
                                                 <th>192.168.88.3</th>
-                                                <th><i class="far fa-trash-alt"></i>
+                                                <th>
+                                                <i class="fas fa-hand-point-up"></i>
                                                 <i class="fas fa-server mr-3 ml-3" ></i>
-                                                <i class="fas fa-edit"></i>
+                                                <i class="fas fa-edit mr-3 "></i>
+                                                <i class="far fa-trash-alt"></i>
                                                 </th>
                                                 </tr>
                                             </tbody>

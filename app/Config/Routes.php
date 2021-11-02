@@ -68,6 +68,13 @@ $routes->get('/datafinger','Masterfinger::index2');
 // DETAIL FINGER
 $routes->get('/detaildatafinger','Masterfinger::detail2');
 
+
+//DATA DIVISI
+$routes->get('/divisi','Datadivisi::index');
+//EDIT DATA DIVISI
+$routes->get('/editdivisi','Datadivisi::edit');
+//DETAIL DATA DIVISI
+$routes->get('/detaildivisi','Datadivisi::detail');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

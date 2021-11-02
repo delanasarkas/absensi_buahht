@@ -5,9 +5,9 @@
         <div class="app-page-title">
             <div class="page-title-wrapper">
                 <div class="page-title-heading">
-                    <img src="/assets/logo/datafinger.jpg" width="180" alt="">
+                    <img src="/assets/logo/select.jpg" width="180" alt="">
                     <div class="ml-2">
-                        <h2>DATA FINGER </h2>
+                        <h2>DATA DIVISI </h2>
                         <div class="page-title-subheading">RSIA BUAH HATI PAMULANG</div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                     <span class="icon text-white-50">
                         <i class="metismenu-icon pe-7s-print"></i>
                     </span>
-                    <span class="text">CETAK</span>
+                    <span class="text">Cetak</span>
                 </a> 
             </div>
         </div>
@@ -46,22 +46,22 @@
                                         <thead class="bg-primary text-white">
                                             <tr>
                                             <th>No</th>
-                                            <th>Tanggal</th>
                                             <th>Nama Karyawan</th>
-                                            <th>Masuk</th>
-                                            <th>Keluar</th>
+                                            <th>Divisi</th>
+                                            <th>Status</th>
                                             <th>Aksi</th>
                                             </tr>
                                         </thead>
                                             <tbody class="bg-white text-black">
                                                 <tr>
                                                 <th>1</th>
-                                                <th>19.01.2021</th>
-                                                <th>Fitri Handayani</th>
-                                                <th>08.00</th>
-                                                <th>17.00</th>
-                                                <th><i class="far fa-trash-alt"></i>
+                                                <th>Imam Samudra</th>
+                                                <th>HRD</th>
+                                                <th>Aktif</th>
+                                                <th>
                                                 <i class="fas fa-server mr-3 ml-3" ></i>
+                                                <i class="fas fa-edit mr-3 "></i>
+                                                <i class="far fa-trash-alt"></i>
                                                 </th>
                                                 </tr>
                                             </tbody>

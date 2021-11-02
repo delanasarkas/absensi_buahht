@@ -50,9 +50,11 @@
                                     <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                    <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                    <button type="button" tabindex="0" class="dropdown-item" >
+                                    <i class="fas fa-user-circle mr-2"> </i>User Account</button>
                                     <div tabindex="-1" class="dropdown-divider"></div>
-                                    <a href="/logout" tabindex="0" class="dropdown-item">Logout</a>
+                                    <a href="/logout" tabindex="0" class="dropdown-item"> <i class="fas fa-person-booth mr-2"> </i>
+                                    Logout</a>
                                 </div>
                             </div>
                         </div>

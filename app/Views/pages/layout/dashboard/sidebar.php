@@ -70,9 +70,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/divisi">
                         <i class="metismenu-icon pe-7s-id"></i>
                         Data Divisi
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-settings"></i>
+                        Data Role
                     </a>
                 </li>
             </ul>

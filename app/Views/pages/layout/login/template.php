@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="/assets/logo/logo.png"/>
+    <link rel="icon" type="image/png" href="/assets/logo/bhp.png"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/login/fonts/icomoon/style.css">
