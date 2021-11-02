@@ -75,6 +75,9 @@ $routes->get('/divisi','Datadivisi::index');
 $routes->get('/editdivisi','Datadivisi::edit');
 //DETAIL DATA DIVISI
 $routes->get('/detaildivisi','Datadivisi::detail');
+
+//Data Role
+$routes->get('/role','datarole::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
