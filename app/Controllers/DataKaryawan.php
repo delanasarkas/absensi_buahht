@@ -12,7 +12,11 @@ class DataKaryawan extends BaseController
         } else {
             $db = \Config\Database::connect();
 
-            $users = $db->query("SELECT a.id_users, a.nik, a.username, a.is_active, b.nama_divisi FROM users a, divisi b WHERE a.id_divisi = b.id_divisi AND a.id_role != 1")->getResult('array');
+            $users = $db->query("SELECT a.id_users, a.nik, 
+            a.username, a.is_active, 
+            b.nama_divisi FROM users a, 
+            divisi b WHERE a.id_divisi 
+            = b.id_divisi AND a.id_role != 1")->getResult('array');
 
             $data = [
                 'user' => $users

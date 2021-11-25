@@ -76,7 +76,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/role">
+                    <a href="/roles">
                         <i class="metismenu-icon pe-7s-settings"></i>
                         Data Role
                     </a>

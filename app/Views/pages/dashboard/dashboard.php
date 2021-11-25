@@ -70,9 +70,9 @@
                                 <img src="/assets/dashboard/assets/images/rsia.jpg" class="img-fluid" width="700" alt="banner" loading="lazy">
                             </div>
                             <div class="col-lg-9">
-                                <p style="line-height: 22px"><h5><strong>RSIA BUAH HATI PAMULANG</strong></h5> terletak di sebelah kiri komplek perumahan villa dago pamulang. berdiri pada Tanggal 19 April 2011 dan beralamat di Jalan Raya Siliwangi No. 189 Benda baru Pamulang, Tangerang Selatan.
+                                <p style="line-height: 22px"><h5><strong>RSIA BUAH HATI PAMULANG</strong></h5> <h4> Terletak di sebelah kiri komplek perumahan villa dago pamulang. berdiri pada Tanggal 19 April 2011 dan beralamat di Jalan Raya Siliwangi No. 189 Benda baru Pamulang, Tangerang Selatan.
                                 RSIA BUAH HATI berdiri pada tahun 2005 di Jl.Aria Putra No. 399 Ciputat, yang Berangkat dari Klinik praktek Dokter bersama di RSIA BUAH HATI CIPUTAT. Karena semakin berkembangnya kesadaran akan kebutuhan masyarakat 
-                                untuk memperoleh pelayanan kesehatan yang lebih baik dan lengkap mendorong konsorsium dokter-dokter spesialis untuk mengembangkan RSIA BUAH HATI menjadi salah satu rumah sakit pilihan masyarakat yang akhirnya menjadi cikal bakal terbentuknya RSIA BUAH HATI PAMULANG. </p>
+                                untuk memperoleh pelayanan kesehatan yang lebih baik dan lengkap mendorong konsorsium dokter-dokter spesialis untuk mengembangkan RSIA BUAH HATI menjadi salah satu rumah sakit pilihan masyarakat yang akhirnya menjadi cikal bakal terbentuknya RSIA BUAH HATI PAMULANG. </h4></p>
                             </div>
                         </div>
                         <div class="row">

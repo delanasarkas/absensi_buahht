@@ -51,7 +51,9 @@
                                 </a>
                                 <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
                                     <button type="button" tabindex="0" class="dropdown-item" >
-                                    <i class="fas fa-user-circle mr-2"> </i>User Account</button>
+                                    <a href="/profile">
+                                    <i class="fas fa-user-circle mr-2"></i>
+                                    User Account</button> 
                                     <div tabindex="-1" class="dropdown-divider"></div>
                                     <a href="/logout" tabindex="0" class="dropdown-item"> <i class="fas fa-person-booth mr-2"> </i>
                                     Logout</a>

@@ -1,6 +1,7 @@
 <?= $this->extend('pages\layout\dashboard\template') ?>
 
 <?= $this->section('content') ?>
+<?php $validation = \Config\Services::validation(); ?>
     <div class="app-main__inner">
         <div class="app-page-title">
             <div class="page-title-wrapper">
@@ -33,17 +34,17 @@
                                 <div class="tab-pane fade show active" id="tabs-eg-77">
                                     <div class="table-responsive">
                                     <form>
-                                <?= csrf_field(); ?>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">IP ADDRESS</label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                                    <small id="emailHelp" class="form-text text-muted"></small>
-                                </div>
+                                    <?= csrf_field(); ?>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">IP ADDRESS</label>
+                                        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                                        <small id="emailHelp" class="form-text text-muted"></small>
+                                    </div>
                                     <button type="submit" class="btn btn-primary">
                                          <i class="metismenu-icon pe-7s-note"></i>
                                              Edit
                                     </button>
-                                    <a href="/karyawan" class="btn btn-danger btn-icon-split">
+                                    <a href="/selectfinger" class="btn btn-danger btn-icon-split">
                                         <i class="metismenu-icon pe-7s-back-2"></i>
                                             <span class="text">Kembali</span>
                                     </a>

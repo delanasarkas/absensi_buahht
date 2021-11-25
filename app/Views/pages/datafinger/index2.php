@@ -16,17 +16,7 @@
                     </div>
                 </div>    
             </div>
-        </div>            
-        <div class="row">
-            <div class="col-md-12 text-right">
-                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
-                    <span class="icon text-white-50">
-                        <i class="metismenu-icon pe-7s-print"></i>
-                    </span>
-                    <span class="text">CETAK</span>
-                </a> 
-            </div>
-        </div>
+        </div>           
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
@@ -46,22 +36,26 @@
                                         <thead class="bg-primary text-white">
                                             <tr>
                                             <th>No</th>
-                                            <th>Tanggal</th>
                                             <th>Nama Karyawan</th>
-                                            <th>Masuk</th>
-                                            <th>Keluar</th>
+                                            <th>Jam Masuk</th>
+                                            <th>Jam Keluar</th>
+                                            <th>Tanggal Masuk</th>
+                                            <th>Tanggal Keluar</th>
                                             <th>Aksi</th>
                                             </tr>
                                         </thead>
                                             <tbody class="bg-white text-black">
                                                 <tr>
                                                 <th>1</th>
-                                                <th>19.01.2021</th>
                                                 <th>Fitri Handayani</th>
                                                 <th>08.00</th>
                                                 <th>17.00</th>
-                                                <th><i class="far fa-trash-alt"></i>
-                                                <i class="fas fa-server mr-3 ml-3" ></i>
+                                                <th>17.01.2021</th>
+                                                <th>17.01.2021</th>
+                                                <th>
+                                                    <i class="fas fa-trash text-danger cursor"></i>
+                                                    <i class="fas fa-list text-success mr-4 ml-4 cursor" ></i>
+                                                    <i class="fas fa-edit text-info cursor"></i>
                                                 </th>
                                                 </tr>
                                             </tbody>

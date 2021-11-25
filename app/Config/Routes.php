@@ -53,15 +53,31 @@ $routes->get('/detailkaryawan/(:segment)','Datakaryawan::detail/$1');
 // DELETE KARYAWAN
 $routes->get('/deletekaryawan/(:segment)', 'Datakaryawan::delete/$1');
 
+//DATA DIVISI
+$routes->get('/divisi','Datadivisi::index');
+//TAMBAH DATA DIVISI
+$routes->get('/tambahdivisi','Datadivisi::tambah');
+//DETAIL DATA DIVISI
+$routes->get('/detaildivisi/(:segment)','Datadivisi::detail/$1');
+//EDIT DATA DIVISI
+$routes->get('/editdivisi/(:segment)','Datadivisi::edit/$1');
+//PROSES EDIT DIVISI
+$routes->add('/proseseditdivisi/(:segment)','Datadivisi::prosesEdit/$1');
+//DELETE DATA DIVISI
+$routes->get('/deletedivisi/(:segment)','Datadivisi::delete/$1');
 
 // MASTER FINGER
+// SELECT FINGER
 $routes->get('/selectfinger','Masterfinger::index');
 // TAMBAH FINGER
 $routes->get('/tambahfinger','Masterfinger::tambah');
 // EDIT FINGER
 $routes->get('/editfinger','Masterfinger::edit');
 // DETAIL FINGER
-$routes->get('/detailfinger','Masterfinger::detail');
+$routes->get('/detailfinger/(segment)','Masterfinger::detail/$1');
+// DELETE SELECT FINGER
+$routes->get('/deletefinger/(:segment)', 'MasterFinger::delete/$1');
+
 
 // DATA FINGER
 $routes->get('/datafinger','Masterfinger::index2');
@@ -69,15 +85,17 @@ $routes->get('/datafinger','Masterfinger::index2');
 $routes->get('/detaildatafinger','Masterfinger::detail2');
 
 
-//DATA DIVISI
-$routes->get('/divisi','Datadivisi::index');
-//EDIT DATA DIVISI
-$routes->get('/editdivisi','Datadivisi::edit');
-//DETAIL DATA DIVISI
-$routes->get('/detaildivisi','Datadivisi::detail');
+//DATA ROLES
+$routes->get('/roles','datarole::index');
+//DETAIL ROLES
+$routes->get('/detailroles/(:segment)','datarole::detail/$1');
+//DELETE ROLES
+$routes->get('deleterole/(::segment)', 'datarole::delete/1');
 
-//Data Role
-$routes->get('/role','datarole::index');
+
+// USER ACCOUNT
+$routes->get('/profile','ProfilKaryawan::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

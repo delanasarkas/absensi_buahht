@@ -51,16 +51,24 @@
                                             </tr>
                                         </thead>
                                             <tbody class="bg-white text-black">
-                                                <tr>
-                                                <th>1</th>
-                                                <th>192.168.88.3</th>
-                                                <th>
-                                                <i class="fas fa-hand-point-up"></i>
-                                                <i class="fas fa-server mr-3 ml-3" ></i>
-                                                <i class="fas fa-edit mr-3 "></i>
-                                                <i class="far fa-trash-alt"></i>
-                                                </th>
-                                                </tr>
+                                                <?php $i = 1; ?>
+                                                <?php foreach($finger as $data) : ?>
+                                                    <tr>
+                                                        <td class="text-center"><?= $i++ ?></td>
+                                                        <td><?= $data['ip_address'] ?></td>
+                                                        <td>
+                                                            <a href="/deletefinger/ <?= $data['id_fingerprint']; ?>" onclick="return confirm('Yakin hapus data?')" class="btn btn-white btn-icon-split mb-2 "> 
+                                                                    <i class="fas fa-trash text-danger cursor"></i>
+                                                            </a>
+                                                            <a href="/detailfinger/<?= $data['id_fingerprint'] ?>" class="btn btn-white btn-icon-split mb-2 ">         
+                                                                    <i class="fas fa-list text-success mr-1 ml-1 cursor" ></i>
+                                                            </a>
+                                                            <a href="/editfinger/<?= $data['id_fingerprint'] ?>" class="btn btn-white btn-icon-split mb-2 ">
+                                                                    <i class="fas fa-edit text-info cursor"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
                                             </tbody>
                                         </table>
                                     </div>

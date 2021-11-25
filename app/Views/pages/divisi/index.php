@@ -16,17 +16,17 @@
                     </div>
                 </div>    
             </div>
-        </div>            
+        </div>
         <div class="row">
             <div class="col-md-12 text-right">
-                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
+                <a href="/tambahdivisi" class="btn btn-primary btn-icon-split mb-2 ">
                     <span class="icon text-white-50">
-                        <i class="metismenu-icon pe-7s-print"></i>
+                        <i class="metismenu-icon pe-7s-add-user"></i>
                     </span>
-                    <span class="text">Cetak</span>
+                    <span class="text">Tambah Divisi</span>
                 </a> 
             </div>
-        </div>
+        </div>            
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
@@ -46,24 +46,33 @@
                                         <thead class="bg-primary text-white">
                                             <tr>
                                             <th>No</th>
+                                            <th>Nik</th>
                                             <th>Nama Karyawan</th>
                                             <th>Divisi</th>
-                                            <th>Status</th>
                                             <th>Aksi</th>
                                             </tr>
                                         </thead>
                                             <tbody class="bg-white text-black">
-                                                <tr>
-                                                <th>1</th>
-                                                <th>Imam Samudra</th>
-                                                <th>HRD</th>
-                                                <th>Aktif</th>
-                                                <th>
-                                                <i class="fas fa-server mr-3 ml-3" ></i>
-                                                <i class="fas fa-edit mr-3 "></i>
-                                                <i class="far fa-trash-alt"></i>
-                                                </th>
-                                                </tr>
+                                            <?php $i = 1; ?>
+                                                <?php foreach($divisi as $data) : ?>
+                                                    <tr>
+                                                        <td class="text-center"><?= $i++ ?></td>
+                                                        <td><?= $data['nik'] ?></td>
+                                                        <td><?= $data['username'] ?></td>
+                                                        <td><?= $data['nama_divisi'] ?></td>
+                                                        <td>
+                                                            <a href="/deletedivisi/ <?= $data['id_divisi']; ?>" onclick="return confirm('Yakin hapus data?')" class="btn btn-white btn-icon-split mb-2 "> 
+                                                                    <i class="fas fa-trash text-danger cursor"></i>
+                                                            </a>
+                                                            <a href="/detaildivisi/<?= $data['id_divisi'] ?>" class="btn btn-white btn-icon-split mb-2 ">         
+                                                                    <i class="fas fa-list text-success mr-1 ml-1 cursor" ></i>
+                                                            </a>
+                                                            <a href="/editdivisi/<?= $data['id_divisi'] ?>" class="btn btn-white btn-icon-split mb-2 ">
+                                                                    <i class="fas fa-edit text-info cursor"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
                                             </tbody>
                                         </table>
                                     </div>

@@ -36,26 +36,30 @@
                                         <thead class="bg-primary text-white">
                                             <tr>
                                             <th>No</th>
-                                            <th>Nik</th>
-                                            <th>Nama Karyawan</th>
-                                            <th>Divisi</th>
+                                            <th>Nama Role</th>
+                                            <th>Deskripsi</th>
                                             <th>Aktif</th>
                                             <th>Aksi</th>
-                                            </tr>
-                                        </thead>
-                                            <tbody class="bg-white text-black">
+                                        </tr>
+                                            </thead>
+                                        <tbody class="bg-white text-black">
+                                            <?php $i = 1; ?>
+                                            <?php foreach($role as $data) : ?>
                                                 <tr>
-                                                <th>1</th>
-                                                <th>19.01.2021</th>
-                                                <th>Fitri Handayani</th>
-                                                <th>IT</th>
-                                                <th>Aktif</th>
-                                                <th>
-                                                <i class="fas fa-edit mr-3 "></i>
-                                                <i class="far fa-trash-alt"></i>
-                                                <i class="fas fa-server mr-3 ml-3" ></i>
-                                                </th>
+                                                    <td class="text-center"><?= $i++ ?></td>
+                                                    <td><?= $data['nama_role'] ?></td>
+                                                    <td><?= $data['deskripsi_role'] ?></td>
+                                                    <th class="badge badge-success">Aktif</th>
+                                                    <td>
+                                                    <a href="/deleteroles/<?= $data['id_role']; ?>" onclick="return confirm('Yakin hapus data?')" class="btn btn-white btn-icon-split mb-2 "> 
+                                                        <i class="fas fa-trash text-danger cursor"></i>
+                                                        </a>
+                                                    <a href="/detailroles/<?= $data['id_role'] ?>" class="btn btn-white btn-icon-split mb-2 ">         
+                                                        <i class="fas fa-list text-success mr-1 ml-1 cursor" ></i>
+                                                        </a>
+                                                    </td>
                                                 </tr>
+                                                <?php endforeach; ?>
                                             </tbody>
                                         </table>
                                     </div>

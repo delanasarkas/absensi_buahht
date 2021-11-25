@@ -19,7 +19,17 @@
                     </div>
                 </div> 
             </div>
-        </div>            
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <a href="#" class="btn btn-primary btn-icon-split mb-2 ">
+                    <span class="icon text-white-50">
+                        <i class="metismenu-icon pe-7s-print"></i>
+                    </span>
+                    <span class="text">Cetak</span>
+                </a> 
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="mb-3 card">
